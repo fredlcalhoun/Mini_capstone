@@ -1,0 +1,10 @@
+<h1>show</h1> 
+<h2><%= @sneaker.brand %></h2>
+<h3><%= @sneaker.price %></h3>
+<h4><%= @sneaker.description %></h4>
+<h5><%= @sneaker.image %></h5>
+<a href="/sneakers/<%= @sneaker.id %>/edit">Edit this sneaker</a>
+<%= form_tag "/sneaker/#{@sneaker.id}", method: "delete" do %>
+  <input type="submit" value="Destroy sneaker">
+<% end %>
+<a href="/sneakers">Back to all sneakers</a>
